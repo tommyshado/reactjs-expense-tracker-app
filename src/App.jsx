@@ -1,3 +1,4 @@
+import Card from "./components/Card";
 import ExpenseItem from "./components/ExpenseItem";
 
 const App = () => {
@@ -7,7 +8,7 @@ const App = () => {
     { date: new Date(2020, 2, 5), title: "Water Bill", amount: 1400.46 },
   ];
   return (
-    <div>
+    <Card>
       <h1>Let us get started!</h1>
       <ExpenseItem
         title={expenses[0].title}
@@ -24,7 +25,7 @@ const App = () => {
         amount={expenses[2].amount}
         date={expenses[2].date}
       />
-    </div>
+    </Card>
   );
 };
 
