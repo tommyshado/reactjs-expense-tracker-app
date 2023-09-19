@@ -30,13 +30,21 @@ const ExpenseForm = () => {
         setUserInput((prevState) => {
             return {
                 ...prevState,
-                dateChangeHandler: event.target.value
+                dateChangeHandler: new Date(event.target.value)
             };
         });
     };
 
+    const submitHandler = (event) => {
+        event.preventDefault();
+
+        const expenseData = userInput;
+
+        console.log(expenseData);
+    };
+
     return (
-        <form>
+        <form onSubmit={submitHandler}>
             <div>
                 <div>
                     <label>Title</label>
